@@ -82,7 +82,7 @@ namespace ECM.BL
 
         public bool Save()
         {
-            // code that saves the speified customer.
+            // code that saves the specified customer.
             return true;
         }
 
