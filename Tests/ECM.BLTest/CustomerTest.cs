@@ -58,5 +58,24 @@ namespace ECM.BLTest
             //-- Assert
             Assert.AreEqual(expected, fullName);
         }
+
+        [TestMethod]
+        public void StaticTest()
+        {
+            //-- Arrange
+            var customer1 = new Customer();
+            Customer.InstanceCount++;
+
+            var customer2 = new Customer();
+            Customer.InstanceCount++;
+
+            var customer3 = new Customer();
+            Customer.InstanceCount++;
+
+            //-- Act
+
+            //-- Assert
+            Assert.AreEqual(3, Customer.InstanceCount);
+        }
     }
 }

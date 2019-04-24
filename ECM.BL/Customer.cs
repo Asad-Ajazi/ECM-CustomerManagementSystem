@@ -31,6 +31,8 @@ namespace ECM.BL
                 return fullName;
             }
         }
+        // belongs to the class itself.
+        public static int InstanceCount { get; set; }
 
     }
 }
