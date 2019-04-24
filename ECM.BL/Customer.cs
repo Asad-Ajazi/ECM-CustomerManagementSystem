@@ -14,11 +14,11 @@ namespace ECM.BL
         public string LastName { get; set; }
         public string EmailAddress { get; set; }
         
-        public string MyProperty
+        public string FullName
         {
             get
             {
-                return LastName + "," + FirstName;
+                return LastName + ", " + FirstName;
             }
         }
 
