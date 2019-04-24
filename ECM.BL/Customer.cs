@@ -8,6 +8,16 @@ namespace ECM.BL
 {
     public class Customer
     {
+        public Customer()
+        {
+
+        }
+
+        public Customer(int customerId)
+        {
+            this.CustomerId = customerId;
+        }
+
         // only this class can set the id. Any caller can get it.
         public int CustomerId { get; private set; }
         public string  FirstName { get; set; }
