@@ -18,7 +18,7 @@ namespace ECM.BL
             ProductId = productId;
         }
 
-        public int ProductId { get; set; }
+        public int ProductId { get; private set; }
         public string ProductName { get; set; }
         public string ProductDescription { get; set; }
         // ? means nullable type. value type that allows value or null
