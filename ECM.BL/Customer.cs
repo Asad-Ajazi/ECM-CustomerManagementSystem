@@ -43,10 +43,8 @@ namespace ECM.BL
             var isValid = true;
 
             // last name and email address are required.
-            if (!string.IsNullOrWhiteSpace(LastName))
-                isValid = false;
-            if (!string.IsNullOrWhiteSpace(EmailAddress))
-                isValid = false;
+            if (string.IsNullOrWhiteSpace(LastName)) isValid = false;
+            if (string.IsNullOrWhiteSpace(EmailAddress)) isValid = false;
 
             return isValid;
         }
@@ -63,9 +61,8 @@ namespace ECM.BL
         }
 
         /// <summary>
-        /// Retrieves all customers.
+        /// Retrieves all customers into a list.
         /// </summary>
-        /// <param name="customerId"></param>
         /// <returns></returns>
         public List<Customer> Retrieve()
         {

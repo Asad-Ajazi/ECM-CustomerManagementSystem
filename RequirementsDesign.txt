@@ -11,6 +11,7 @@ The system must:
 
 CLASSES:
 	Customer:
+	// The LastName and EmailAddress are required fields.
 		Customer's name(lastName, FirstName).
 		Email address,
 		Home address,
