@@ -34,5 +34,52 @@ namespace ECM.BL
         // belongs to the class itself.
         public static int InstanceCount { get; set; }
 
+        /// <summary>
+        /// Validated customer data and returns true or false.
+        /// </summary>
+        /// <returns></returns>
+        public bool Validate()
+        {
+            var isValid = true;
+
+            // last name and email address are required.
+            if (!string.IsNullOrWhiteSpace(LastName))
+                isValid = false;
+            if (!string.IsNullOrWhiteSpace(EmailAddress))
+                isValid = false;
+
+            return isValid;
+        }
+
+        /// <summary>
+        /// Retrieves a single customer associated with the customerId.
+        /// </summary>
+        /// <param name="customerId"></param>
+        /// <returns></returns>
+        public Customer Retrieve(int customerId)
+        {
+            // code that retreives the specified customer.
+            return new Customer();
+        }
+
+        /// <summary>
+        /// Retrieves all customers.
+        /// </summary>
+        /// <param name="customerId"></param>
+        /// <returns></returns>
+        public List<Customer> Retrieve()
+        {
+            // code that retreives the specified customer.
+            return new List<Customer>();
+        }
+
+        public bool Save()
+        {
+            // code that saves the speified customer.
+            return true;
+        }
+
+
+
     }
 }
