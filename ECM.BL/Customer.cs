@@ -18,7 +18,17 @@ namespace ECM.BL
         {
             get
             {
-                return LastName + ", " + FirstName;
+                //updated get method to account for missing first or last name.
+                string fullName = LastName;
+                if (!string.IsNullOrWhiteSpace(FirstName))
+                {
+                    if (!string.IsNullOrWhiteSpace(fullName))
+                    {
+                        fullName += ", ";
+                    }
+                    fullName += FirstName;
+                }
+                return fullName;
             }
         }
 
