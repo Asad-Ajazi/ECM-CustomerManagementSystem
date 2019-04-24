@@ -1,0 +1,47 @@
+Building a Customer Management System - ECM
+
+Requirements Scenario:
+	Building a new crm system to handle an increased number of users.
+
+The system must:
+
+1. Manage business, residential, government and educator types of customers.
+2. manage our products
+3. accept orders from customers online or through a call center.
+
+CLASSES:
+	Customer:
+		Customer's name(lastName, FirstName).
+		Email address,
+		Home address,
+		Work address.
+			Validate(),
+			Retrieve(),
+			Save().
+	Product:
+		Product name,
+		Description,
+		Current price.
+			Validate(),
+			Retrieve(),
+			Save().
+	Order:
+		Customer,
+		Order date,
+		Shipping address,
+		Order Items(a list?).
+			Validate(),
+			Retrieve(),
+			Save().
+	Order Item:
+		Product,
+		Quantity,
+		Purchase Price.
+			Validate(),
+			Retrieve(),
+			Save().
+
+
+
+
+
