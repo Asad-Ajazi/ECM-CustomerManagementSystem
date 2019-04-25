@@ -10,11 +10,11 @@ namespace Extra.Common
     {
 
         /// <summary>
-        /// Adds a Space before every upper case charater in the given string.
+        /// Adds a Space before every upper case letter in a string.
         /// </summary>
         /// <param name="source"></param>
         /// <returns></returns>
-        public static string InsertSpaces(string source)
+        public static string InsertSpaces(this string source) // this keyword represents type being extended
         {
             string result = string.Empty;
 

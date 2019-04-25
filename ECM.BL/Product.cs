@@ -30,7 +30,10 @@ namespace ECM.BL
             get
             {
                 // Inserts appropriate spaces in the name.
-                return StringHandler.InsertSpaces(_productName);
+
+                //return StringHandler.InsertSpaces(_productName);
+                // using a static extention method to call directly instead of code above.
+                return _productName.InsertSpaces();
             }
             set
             {
