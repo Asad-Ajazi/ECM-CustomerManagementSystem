@@ -35,11 +35,31 @@ namespace ECM.BL
         /// Save the current order.
         /// </summary>
         /// <returns></returns>
-        public bool Save()
+        public bool Save(Order order)
         {
-            // code that saves the passed in order.
-            return true;
-        }
+            var success = true;
+
+            if (order.HasChanges)
+            {
+                if (order.IsValid)
+                {
+                    if (order.IsNew)
+                    {
+                        // Make call to insert stored procedure.
+                    }
+                    else
+                    {
+                        // Make call to update stored procedure.
+                    }
+                }
+                else
+                {
+                    success = false;
+                }
+            }
+            return success;
+        }    
 
     }
 }
+

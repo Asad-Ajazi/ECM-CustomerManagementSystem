@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ECM.BL
 {
-    public class Address
+    public class Address : EntityBase
     {
         public Address()
         {
@@ -31,7 +31,7 @@ namespace ECM.BL
         /// Validates the address.
         /// </summary>
         /// <returns></returns>
-        public bool Validate()
+        public override bool Validate()
         {
             var isValid = true;
 

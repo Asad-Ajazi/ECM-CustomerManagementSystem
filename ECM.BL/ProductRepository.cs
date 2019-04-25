@@ -43,8 +43,27 @@ namespace ECM.BL
         /// <returns></returns>
         public bool Save(Product product)
         {
-            // Code that saves a product.
-            return true;
+            var success = true;
+
+            if (product.HasChanges)
+            {
+                if (product.IsValid)
+                {
+                    if (product.IsNew)
+                    {
+                        // Make call to insert stored procedure.
+                    }
+                    else
+                    {
+                        // Make call to update stored procedure.
+                    }
+                }
+                else
+                {
+                    success = false;
+                }
+            }
+            return success;
         }
     }
 }

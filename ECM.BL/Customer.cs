@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ECM.BL
 {
-    public class Customer
+    public class Customer : EntityBase
     {
         // this(0) calls the second constructor and passes a default 0 for the id.
         public Customer() : this(0)
@@ -58,7 +58,7 @@ namespace ECM.BL
         /// Validated customer data and returns true or false.
         /// </summary>
         /// <returns></returns>
-        public bool Validate()
+        public override bool Validate()
         {
             var isValid = true;
 

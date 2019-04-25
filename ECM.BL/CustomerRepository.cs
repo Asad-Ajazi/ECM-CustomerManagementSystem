@@ -47,8 +47,27 @@ namespace ECM.BL
         /// <returns></returns>
         public bool Save(Customer customer)
         {
-            // Code that saves a customer.
-            return true;
-        }
+            var success = true;
+
+            if (customer.HasChanges)
+            {
+                if (customer.IsValid)
+                {
+                    if (customer.IsNew)
+                    {
+                        // Make call to insert stored procedure.
+                    }
+                    else
+                    {
+                        // Make call to update stored procedure.
+                    }
+                }
+                else
+                {
+                    success = false;
+                }
+            }
+            return success;
+        }    
     }
 }

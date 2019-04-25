@@ -77,8 +77,28 @@ namespace ECM.BL
         /// <returns></returns>
         public bool Save(Address address)
         {
-            // code to save
-            return true;
+            var success = true;
+
+            if (address.HasChanges)
+            {
+                if (address.IsValid)
+                {
+                    if (address.IsNew)
+                    {
+                        // Make call to insert stored procedure.
+                    }
+                    else
+                    {
+                        // Make call to update stored procedure.
+                    }
+                }
+                else
+                {
+                    success = false;
+                }
+            }
+            return success;
         }
     }
-}
+    }
+

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ECM.BL
 {
-    public class Order
+    public class Order : EntityBase
     {
         public Order() : this(0)
         {
@@ -34,7 +34,7 @@ namespace ECM.BL
         /// Validates the order data.
         /// </summary>
         /// <returns></returns>
-        public bool Validate()
+        public override bool Validate()
         {
             var isValid = true;
             if (OrderDate == null)
