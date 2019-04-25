@@ -9,6 +9,10 @@ The system must:
 2. manage our products
 3. accept orders from customers online or through a call center.
 
+
+//new problem. Data from third party is passing data without spaces in product names.
+// need to add spaces before each capital letter in the string.
+
 CLASSES:
 	Customer:
 	// The LastName and EmailAddress are required fields.

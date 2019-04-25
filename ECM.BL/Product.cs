@@ -19,11 +19,22 @@ namespace ECM.BL
         }
 
         public int ProductId { get; private set; }
-        public string ProductName { get; set; }
         public string ProductDescription { get; set; }
         // ? means nullable type. value type that allows value or null
         public decimal? CurrentPrice { get; set; }
 
+        private string _productName;
+        public string ProductName
+        {
+            get
+            {
+                return _productName;
+            }
+            set
+            {
+                _productName = value;
+            }
+        }
         // overriding the object class ToString method.
         public override string ToString() => ProductName;
 
