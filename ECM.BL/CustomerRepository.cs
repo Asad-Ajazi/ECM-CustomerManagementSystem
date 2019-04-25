@@ -8,6 +8,14 @@ namespace ECM.BL
 {
     public class CustomerRepository
     {
+        public CustomerRepository()
+        {
+            // Collaborative "uses a" relationship between Customer repo and Address repo
+            addressRepository = new AddressRepository();
+        }
+
+        private AddressRepository addressRepository { get; set; }
+
         /// <summary>
         /// Retriece one customer.
         /// </summary>
@@ -27,6 +35,7 @@ namespace ECM.BL
                 customer.EmailAddress = "JSmith@gmail.com";
                 customer.FirstName = "John";
                 customer.LastName = "Smith";
+                customer.AddresseList = addressRepository.RetrieveByCustomerId(customerId).ToList();
             }
             return customer;
         }

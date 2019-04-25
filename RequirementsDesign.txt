@@ -55,6 +55,10 @@ CLASSES:
 		Retrieve(),
 		Save().
 
+	AddressRepository:
+		Retrieve(),
+		Save().
+
 	Order Item:
 		Product,
 		Quantity,

@@ -8,7 +8,8 @@ namespace ECM.BL
 {
     public class Customer
     {
-        public Customer()
+        // this(0) calls the second constructor and passes a default 0 for the id.
+        public Customer() : this(0)
         {
 
         }
@@ -16,7 +17,12 @@ namespace ECM.BL
         public Customer(int customerId)
         {
             this.CustomerId = customerId;
+            // Initialise list to prevent null reference default value.
+            AddresseList = new List<Address>();
         }
+
+        // composition "Has a" relationship between customer and Address.
+        public List<Address> AddresseList { get; set; }
 
         // only this class can set the id. Any caller can get it.
         public int CustomerId { get; private set; }
