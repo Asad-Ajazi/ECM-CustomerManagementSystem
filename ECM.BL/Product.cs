@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Extra.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,7 +29,8 @@ namespace ECM.BL
         {
             get
             {
-                return _productName;
+                // Inserts appropriate spaces in the name.
+                return StringHandler.InsertSpaces(_productName);
             }
             set
             {

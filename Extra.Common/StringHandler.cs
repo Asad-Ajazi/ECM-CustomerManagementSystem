@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Extra.Common
 {
-    public class StringHandler
+    public static class StringHandler
     {
 
         /// <summary>
@@ -14,7 +14,7 @@ namespace Extra.Common
         /// </summary>
         /// <param name="source"></param>
         /// <returns></returns>
-        public string InsertSpaces(string source)
+        public static string InsertSpaces(string source)
         {
             string result = string.Empty;
 
