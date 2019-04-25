@@ -12,36 +12,54 @@ The system must:
 CLASSES:
 	Customer:
 	// The LastName and EmailAddress are required fields.
-		Customer's name(lastName, FirstName).
-		Email address,
-		Home address,
+		FirstName,
+		LastName,
+		Email address, (only need to track one)
+		Home address, (Separate address into its own class)
 		Work address.
-			Validate(),
-			Retrieve(),
-			Save().
+		Validate()
+
+	Address:
+		Street line 1
+		Street line 2
+		City
+		State/Province
+		Postal Code
+		Country
+		Address Type
+		Validate().
+
 	Product:
 		Product name,
 		Description,
 		Current price.
-			Validate(),
-			Retrieve(),
-			Save().
+		Validate().
+
 	Order:
 		Customer,
 		Order date,
 		Shipping address,
 		Order Items(a list?).
-			Validate(),
-			Retrieve(),
-			Save().
+		Validate().
+
+
+	CustomerRepository:
+		Retrieve(),
+		Save().
+
+	ProductRepository:
+		Retrieve(),
+		Save().
+
+	OrderRepository:
+		Retrieve(),
+		Save().
+
 	Order Item:
 		Product,
 		Quantity,
 		Purchase Price.
-			Validate(),
-			Retrieve(),
-			Save().
-
+		Validate().
 
 
 
