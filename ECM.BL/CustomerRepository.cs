@@ -23,8 +23,7 @@ namespace ECM.BL
         /// <returns></returns>
         public Customer Retrieve(int customerId)
         {
-            // Create an instance of the customer class.
-            // pass in the id.
+            // Create an instance of the customer class, passing id.
             Customer customer = new Customer(customerId);
 
             // code that retrieves the specified customer.
@@ -35,6 +34,7 @@ namespace ECM.BL
                 customer.EmailAddress = "JSmith@gmail.com";
                 customer.FirstName = "John";
                 customer.LastName = "Smith";
+                // call the address repository to retrive addresses for the specified customer.
                 customer.AddresseList = addressRepository.RetrieveByCustomerId(customerId).ToList();
             }
             return customer;
