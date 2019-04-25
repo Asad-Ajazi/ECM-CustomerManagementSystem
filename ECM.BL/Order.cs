@@ -8,7 +8,7 @@ namespace ECM.BL
 {
     public class Order
     {
-        public Order()
+        public Order() : this(0)
         {
 
         }
@@ -16,11 +16,16 @@ namespace ECM.BL
         public Order(int orderId)
         {
             OrderId = orderId;
+            OrderItems = new List<OrderItem>();
         }
 
+        
         public int OrderId { get; private set; }
         // nullable DateTimeOffset to account for different time zones.
         public DateTimeOffset? OrderDate { get; set; }
+        public int CustomerId { get; set; }
+        public int ShippingAddressId { get; set; }
+        public List<OrderItem> OrderItems { get; set; }
 
 
         /// <summary>

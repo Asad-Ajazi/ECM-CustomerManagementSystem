@@ -26,6 +26,7 @@ namespace ECM.BL
 
         // only this class can set the id. Any caller can get it.
         public int CustomerId { get; private set; }
+        public int CustomerType { get; set; }
         public string  FirstName { get; set; }
         public string LastName { get; set; }
         public string EmailAddress { get; set; }
