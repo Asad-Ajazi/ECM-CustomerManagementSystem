@@ -43,25 +43,6 @@ namespace ECM.BL
             return isValid;
         }
 
-        /// <summary>
-        /// Retrieve a single product.
-        /// </summary>
-        /// <param name="productId"></param>
-        /// <returns></returns>
-        public Product Retrieve(int productId)
-        {
-            // code that retrieves specific product.
-            return new Product();
-        }
 
-        /// <summary>
-        /// Save the current product.
-        /// </summary>
-        /// <returns></returns>
-        public bool Save()
-        {
-            // code that saves the specified product.
-            return true;
-        }
     }
 }

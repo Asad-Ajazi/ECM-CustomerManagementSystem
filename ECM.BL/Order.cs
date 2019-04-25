@@ -36,30 +36,5 @@ namespace ECM.BL
             }
             return isValid;
         }
-
-
-        /// <summary>
-        /// Retrieves a single order based on passed in id.
-        /// </summary>
-        /// <param name="orderId"></param>
-        /// <returns></returns>
-        public Order Retrieve(int orderId)
-        {
-            // code that retrieves defiened order.
-
-            return new Order();
-        }
-
-        /// <summary>
-        /// Saves the current order.
-        /// </summary>
-        /// <returns></returns>
-        public bool Save()
-        {
-            // code that saves the current order.
-            return true;
-        }
-
-
     }
 }
