@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ECM.BL
 {
-    public class Product : EntityBase
+    public class Product : EntityBase, ILoggable
     {
         public Product()
         {
@@ -40,6 +40,9 @@ namespace ECM.BL
                 _productName = value;
             }
         }
+
+        public string Log() => $"{ProductId}: {ProductName} Detail: {ProductDescription} Status: {EntityState.ToString()}";
+
         // overriding the object class ToString method.
         public override string ToString() => ProductName;
 

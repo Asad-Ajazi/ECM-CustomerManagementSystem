@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Extra.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ECM.BL
 {
-    public class Order : EntityBase
+    public class Order : EntityBase , ILoggable
     {
         public Order() : this(0)
         {
@@ -27,6 +28,7 @@ namespace ECM.BL
         public int ShippingAddressId { get; set; }
         public List<OrderItem> OrderItems { get; set; }
 
+        public string Log() => $"{OrderId}: Date: {this.OrderDate.Value.Date} Status: {this.EntityState.ToString()}";
 
         public override string ToString() => $"{OrderDate.Value.Date}({OrderId})";
 

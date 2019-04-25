@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Extra.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ECM.BL
 {
-    public class Customer : EntityBase
+    public class Customer : EntityBase , ILoggable
     {
         // this(0) calls the second constructor and passes a default 0 for the id.
         public Customer() : this(0)
@@ -51,6 +52,10 @@ namespace ECM.BL
         // belongs to the class itself.
         public static int InstanceCount { get; set; }
 
+
+
+        // lambda for simplification
+        public string Log() => $"{CustomerId}: {FullName} Email: {EmailAddress} Status: {EntityState.ToString()}";
 
         public override string ToString() => FullName;
 
