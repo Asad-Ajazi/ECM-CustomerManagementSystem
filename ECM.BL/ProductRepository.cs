@@ -29,6 +29,10 @@ namespace ECM.BL
                 product.ProductDescription = "A set of 6 Roses.";
                 product.CurrentPrice = 15.15M;
             }
+            Object myObject = new Object();
+            Console.WriteLine($"Object: {myObject.ToString()}");
+            Console.WriteLine($"Product: {product.ToString()}");
+
             return product;
         }
 

@@ -51,6 +51,9 @@ namespace ECM.BL
         // belongs to the class itself.
         public static int InstanceCount { get; set; }
 
+
+        public override string ToString() => FullName;
+
         /// <summary>
         /// Validated customer data and returns true or false.
         /// </summary>

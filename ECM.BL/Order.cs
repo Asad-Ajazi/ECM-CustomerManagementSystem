@@ -28,6 +28,8 @@ namespace ECM.BL
         public List<OrderItem> OrderItems { get; set; }
 
 
+        public override string ToString() => $"{OrderDate.Value.Date}({OrderId})";
+
         /// <summary>
         /// Validates the order data.
         /// </summary>

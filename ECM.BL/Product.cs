@@ -24,6 +24,9 @@ namespace ECM.BL
         // ? means nullable type. value type that allows value or null
         public decimal? CurrentPrice { get; set; }
 
+        // overriding the object class ToString method.
+        public override string ToString() => ProductName;
+
         /// <summary>
         /// Validate the product data.
         /// </summary>
