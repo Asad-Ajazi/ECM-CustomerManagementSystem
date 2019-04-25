@@ -58,35 +58,5 @@ namespace ECM.BL
 
             return isValid;
         }
-
-        /// <summary>
-        /// Retrieves a single customer associated with the customerId.
-        /// </summary>
-        /// <param name="customerId"></param>
-        /// <returns></returns>
-        public Customer Retrieve(int customerId)
-        {
-            // code that retreives the specified customer.
-            return new Customer();
-        }
-
-        /// <summary>
-        /// Retrieves all customers into a list.
-        /// </summary>
-        /// <returns></returns>
-        public List<Customer> Retrieve()
-        {
-            // code that retreives the specified customer.
-            return new List<Customer>();
-        }
-
-        public bool Save()
-        {
-            // code that saves the specified customer.
-            return true;
-        }
-
-
-
     }
 }
